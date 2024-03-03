@@ -32,4 +32,7 @@ const server = http.createServer((req,res)=>{
 server.listen(PORT,()=>{
     console.log(`server is listnning on port ${PORT}`)
 });
+setTimeout(()=>{
+    console.log("this is using settimeout function");
+},2000)
 
