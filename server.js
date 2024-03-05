@@ -6,6 +6,20 @@ freinds = {
     name:'fikereyesus',
     code_number : 453763
 }
+app.use((req,res,next)=>{
+    const start = Date.now();
+    console.log(`${req.method,req.url}`);
+    next();
+    const delta = Date.now() - start;
+});
+app.use(express.json());
+app.post('/freinds',(req,res)=>{
+    const newFreind = {
+        name: req.body.name
+        
+    }
+
+});
 app.get('/',(req,res)=>{
     res.send('hello port 303482');
 });
